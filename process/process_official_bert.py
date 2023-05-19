@@ -44,7 +44,7 @@ args = parser.parse_args()
 
 def process_one_line(line):
     sample = json.loads(line)
-    url = sample['url']
+    url = sample['url'] if 'url' in sample else 'no_url'
     question = clean(sample['question'])
     paras = sample['nodes']
     seq_ids = tokenizer.encode(clean(question), truncation=True, max_length=100, add_special_tokens=False) + [
