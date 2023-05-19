@@ -64,17 +64,17 @@ def process_one(filename):
 
 
 def process_comqa_to_features():
-    train_path = '../data/comqa/train.json'
+    train_path = './data/comqa/train.json'
     data = process_one(train_path)
     print('train data size is {}'.format(len(data)))
     dump_file(data, args.train)
 
-    dev_path = '../data/comqa/dev.json'
+    dev_path = './data/comqa/dev.json'
     data = process_one(dev_path)
     print('dev data size is {}'.format(len(data)))
     dump_file(data, args.dev)
 
-    test_path = '../data/comqa/test.json'
+    test_path = './data/comqa/test.json'
     data = process_one(test_path)
     print('test data size is {}'.format(len(data)))
     dump_file(data, args.test)
